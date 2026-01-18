@@ -1,6 +1,6 @@
+//2026-01-18
 #include <string.h>
 #include <stdio.h>
-
 char * mergeAlternately(char * word1, char * word2){
     int i = 0;
     int wrd_1_len = strlen(word1);
