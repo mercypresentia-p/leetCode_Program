@@ -1,0 +1,18 @@
+#include <string.h>
+#include <stdio.h>
+
+char * mergeAlternately(char * word1, char * word2){
+    int i = 0;
+    int wrd_1_len = strlen(word1);
+    int wrd_2_len = strlen(word2);
+    static char merged[100];
+    int min = (wrd_1_len < wrd_2_len) ? wrd_1_len : wrd_2_len;
+    for (i = 0; i < min; i++){
+        merged[i * 2] = word1[i];
+        merged[(i * 2) + 1] = word2[i];
+    }
+    merged[min * 2] = '\0';
+    char *str = (wrd_1_len < wrd_2_len) ? &word2[i] : &word1[i];
+    strcat(merged, str);
+    return merged; 
+}
